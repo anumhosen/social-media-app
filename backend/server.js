@@ -31,13 +31,12 @@ app.use("/api/posts", postRoutes);
 app.use("/api/requests", requestRoutes);
 app.use("/api/users", userRoutes);
 
-/** 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
-**/
+
 server.listen(PORT, () => {
   connectToMongoDB();
   console.log("Server running on port " + PORT);
